@@ -3,96 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Skip Loehr Therapy | Queer-Affirming, Attachment-Focused Counseling in Albuquerque, NM</title>
     <meta name="description" content="Attachment-focused, queer-affirming individual and couples therapy services in Albuquerque, New Mexico. Offering EFCT and a sliding scale for inclusive mental health care.">
     <meta name="keywords" content="Queer therapy Albuquerque, couples therapy in Albuquerque, EFCT therapist near me, attachment-focused therapy, LGBTQIA+ therapist New Mexico, counseling services, individual therapy, teen therapy">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     
     <style>
-
+        /* --- New Color Palette Definition --- */
         :root {
-            --color-bg-light: #E6D9F2; /* Soft lavender background (used for content blocks, but now made transparent) */
-            --color-primary-purple: #6A1B9A; /* Deep Purple (Text/Primary CTA) */
-            --color-accent-yellow: #FFC107; /* Brighter Yellow (Emphasis/Star) */
-            --color-accent-coral: #F06292; /* Brighter Coral/Pink */
-            --color-accent-teal: #26A69A; /* Richer Teal/Turquoise */
-            --color-text: #1f2937; /* Dark Slate Grey for maximum readability */
+            --color-primary-purple: #6A1B9A; /* Deep Purple */
+            --color-heading-plum: #4A148C; /* Deeper Plum for Headings */
+            --color-background-soft: #FAF9F6; /* Soft Neutral/Ivory Background */
+            --color-accent-pink: #F06292; /* Pink Accent */
+            --color-accent-teal: #26A69A; /* Teal Accent */
+            --color-cta-yellow: #FFC107; /* Bright Yellow/Gold */
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
-            color: var(--color-text);
-
-            background-image: url('https://www.shutterstock.com/image-photo/psychologists-office-cozy-chairs-sofa-600nw-2469996325.jpg');
-            background-size: cover; 
-            background-attachment: fixed;
-            background-position: center center; 
+            color: #374151; /* Default text color (Dark Gray) */
+            background-color: var(--color-background-soft); /* Soft Neutral Background */
         }
         
+        /* Apply Deep Plum to all headings for readability and elegance */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
+            color: var(--color-heading-plum);
         }
 
+        /* Smooth scrolling for navigation */
         html {
             scroll-behavior: smooth;
         }
 
+        /* Standard CTA Button Style (used for all main buttons) */
         .cta-button {
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(106, 27, 154, 0.4); 
         }
+        
+        /* Subtle lift and stronger shadow on hover */
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(106, 27, 154, 0.6);
-            background-color: #7B32B3;
+            transform: translateY(-3px) scale(1.01); 
+            box-shadow: 0 8px 25px rgba(106, 27, 154, 0.6);
+        }
+
+        /* Primary Purple CTA hover */
+        .primary-cta:hover {
+            background-color: #7B32B3; 
+        }
+
+        /* Schedule CTA specific style (for contrast) */
+        .schedule-cta {
+            /* Uses the bright yellow/gold for standout visibility */
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.6); 
+        }
+        /* Schedule CTA hover with color change */
+        .schedule-cta:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.9);
+            background-color: #FFD54F; /* Lighter yellow on hover */
         }
         
+        /* Divider remains Pink Accent */
         .divider {
             height: 4px;
             width: 60px;
-            background-color: var(--color-accent-coral);
+            background-color: var(--color-accent-pink);
             margin: 0 auto 2.5rem;
             border-radius: 2px;
         }
 
+        /* Custom styles for the accordion */
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
         }
         
+        /* Content blocks use simple white/soft neutral to keep contrast clean */
         .content-bg {
-            background-color: rgba(255, 255, 255, 0.8); /* 80% opaque white */
-            backdrop-filter: blur(2px); /* Slight blur for better contrast */
+            background-color: var(--color-background-soft); 
         }
     </style>
 </head>
 <body>
 
+    
     <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <a href="#home" class="text-xl font-extrabold text-[var(--color-primary-purple)] tracking-tight">Skip Loehr Therapy</a>
+            
+            
+            <a href="#home" class="text-xl font-extrabold text-[--color-primary-purple] tracking-tight">Skip Loehr Therapy Services</a>
+            
             
             <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">About</a>
-                <a href="#services" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">Services</a>
-                <a href="#insurance" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">Insurance / Payment</a>
-                <a href="#faq" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">FAQ</a>
-                <a href="#resources" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">Resources</a>
-                <a href="#contact" class="text-gray-600 hover:text-[var(--color-primary-purple)] transition duration-150">Contact</a>
+                <a href="#home" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">About</a>
+                <a href="#services" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">Services</a>
+                <a href="#insurance" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">Insurance / Payment</a>
+                <a href="#faq" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">FAQ</a>
+                <a href="#resources" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">Resources</a>
+                <a href="#contact" class="text-gray-600 hover:text-[--color-primary-purple] transition duration-150">Contact</a>
             </nav>
+            
             
             <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
+        
         
         <nav id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
             <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Home</a>
@@ -107,124 +134,151 @@
 
     <main>
         
+        
         <section id="home" class="relative overflow-hidden pt-20 pb-16 md:py-32 min-h-screen flex items-center content-bg">
             
             <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
                 
+                
                 <div class="md:w-1/2 space-y-6 text-center md:text-left">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
-                        Queer-Affirming, Attachment-Focused Counseling in <span class="text-[var(--color-primary-purple)]">Albuquerque</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                        Queer-Affirming, Attachment-Focused Counseling in <span class="text-[--color-primary-purple]">Albuquerque</span>
                     </h1>
+                    
+                    
+
                     <p class="text-xl text-gray-600 font-semibold italic">
-                        Finding security in yourself and your relationships.
+                        Finding security in yourself and your relationships
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        Welcome. I’m Skip Loehr, and I offer a safe, collaborative space where you can explore the patterns that shape your life and relationships. My work centers around the principles of attachment, helping you build a more secure, authentic, and connected existence.
+                        Welcome! My name is Skip Loehr and I offer a safe, collaborative space where you can explore the patterns that shape your life and relationships. My work centers supporting both couples and individuals in becoming more secure, authentic, and connected.
                     </p>
                     
-                    <a href="#contact" class="inline-block px-10 py-4 text-white font-bold text-lg bg-[var(--color-primary-purple)] rounded-full hover:bg-blue-800 cta-button">
+                    
+                    <a href="#contact" class="inline-block px-10 py-4 text-white font-bold text-lg bg-[--color-primary-purple] rounded-full hover:bg-[--color-heading-plum] cta-button primary-cta">
                         Let's Work Together
                     </a>
                 </div>
                 
+                
                 <div class="md:w-1/2 relative flex justify-center p-4">
-                    <img src="https://photos.psychologytoday.com/ba98fc07-5fa1-4707-b3c1-0f2baba809b5/1/320x400.jpeg" 
+                    
+                    <img src="headshot.jpeg" 
                          alt="Skip Loehr, Queer-Affirming Therapist for Couples in Albuquerque, New Mexico." 
                          class="relative z-20 w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-2xl border-4 border-white transform hover:scale-105 transition duration-300">
                 </div>
             </div>
         </section>
 
+        
         <section id="about" class="py-20 content-bg border-t border-b border-gray-100">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">
-                    About Skip Loehr
+                
+
+                <h2 class="text-4xl font-extrabold text-center mb-4">
+                    About
                 </h2>
                 <div class="divider"></div>
                 
                 <div class="grid md:grid-cols-3 gap-10">
-                    <div class="md:col-span-1 bg-[var(--color-bg-light)] p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
-                        <img src="https://photos.psychologytoday.com/ba98fc07-5fa1-4707-b3c1-0f2baba809b5/1/320x400.jpeg" 
+                    
+                    <div class="md:col-span-1 bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <img src="headshot.jpeg" 
                              alt="Skip Loehr, Therapist" 
                              class="w-48 h-48 object-cover rounded-full mb-4 border-4 border-white shadow-md">
-                        <h3 class="text-xl font-bold text-[var(--color-primary-purple)]">Skip Loehr, LMFT Candidate</h3>
-                        <p class="text-sm text-gray-600 mt-1">License: LMFT-### (Under Supervision)</p>
+                        
+
+                        <h3 class="text-xl font-bold text-[--color-primary-purple]">Skip Loehr, LMHC Candidate</h3>
+                        <p class="text-sm text-gray-600 mt-1">License: LMHC-### (Under Supervision)</p>
                         <p class="text-sm text-gray-600">Specializations: EFCT, Attachment, Trauma</p>
-                        <a href="#contact" class="mt-4 text-sm font-semibold text-[var(--color-accent-teal)] hover:underline">Verify My Credentials</a>
+                        <a href="#contact" class="mt-4 text-sm font-semibold text-[--color-accent-teal] hover:underline">Verify My Credentials</a>
                     </div>
 
+                    
                     <div class="md:col-span-2 space-y-6 text-lg text-gray-700 leading-relaxed">
                         <p>
-                            As an LMFT Candidate, my practice is fundamentally centered on **Attachment Theory**. I believe that most of our distress and relationship difficulties stem from a fear of disconnection. My role is to help you map the emotional bonds in your life—whether with yourself, a partner, or your family—and transform insecure patterns into secure, thriving connections.
+                            As an LMHC Candidate, my practice is fundamentally centered on Attachment Theory. I believe that most of our distress and relationship difficulties stem from a fear of disconnection. My role is to help you map the emotional bonds in your life—whether with yourself, a partner, or your family—and transform insecure patterns into secure, thriving connections.
                         </p>
                         <p>
-                            I am highly trained in EFCT, a deeply effective, evidence-based modality. EFCT doesn't just manage symptoms; it targets the root cause of relational conflict by helping partners identify their negative interaction cycles and express their deeper, often vulnerable, emotional needs. This process creates a lasting, emotionally corrective experience that rewires the relationship for security.
+                             I am highly trained in EFCT, a deeply effective, evidence-based modality. EFCT doesn't just manage symptoms; it targets the root cause of relational conflict by helping partners identify their negative interaction cycles and express their deeper, often vulnerable, emotional needs. This process creates a lasting, emotionally corrective experience that rewires the relationship for security.
                         </p>
                         <p>
                             Finding a therapist who truly understands your lived experience is essential. As a queer-affirming professional, I provide a non-pathologizing, celebratory space for all genders, sexual orientations, and relationship configurations (including polyamory and non-monogamy). You will never have to educate me on your identity or fight for validation here. Your intersectionality is honored and woven into our work together.
                         </p>
-                        <p class="font-semibold text-[var(--color-primary-purple)] italic">
+                        <p class="font-semibold text-[--color-primary-purple] italic">
                             I look forward to helping you move from feeling stuck and isolated to experiencing authentic connection, resilience, and joy.
                         </p>
                     </div>
                 </div>
 
+                
                 <div class="grid md:grid-cols-2 gap-8 pt-8 border-t border-gray-200 mt-10">
-                    <div class="bg-[var(--color-bg-light)] p-6 rounded-xl shadow-lg border-l-4 border-[var(--color-accent-teal)]">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center"><i class="fas fa-handshake mr-3 text-[var(--color-accent-teal)]"></i> My Commitment</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[--color-accent-teal]">
+                        <h3 class="text-2xl font-bold mb-3 flex items-center text-[--color-heading-plum]"><i class="fas fa-handshake mr-3 text-[--color-accent-teal]"></i> My Commitment</h3>
                         <p class="text-gray-700 leading-relaxed">
                             To foster lasting emotional security and resilience for individuals, couples, and teens in the Albuquerque community, prioritizing genuine connection and systemic understanding through attachment theory.
                         </p>
                     </div>
-                    <div class="bg-[var(--color-bg-light)] p-6 rounded-xl shadow-lg border-l-4 border-[var(--color-accent-coral)]">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3 flex items-center"><i class="fas fa-venus-mars mr-3 text-[var(--color-accent-coral)]"></i> Affirmation Statement</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[--color-accent-pink]">
+                        
+
+                        <h3 class="text-2xl font-bold mb-3 flex items-center text-[--color-heading-plum]"><i class="fas fa-hands-holding mr-3 text-[--color-accent-pink]"></i> Affirmation Statement</h3>
                         <p class="text-gray-700 leading-relaxed">
-                            Therapy with me is a space free of judgment, where your whole self—including your identity, sexual orientation, and cultural background—is honored and understood without question.
+                            I am dedicated to cultivating a therapeutic space where the client’s whole self—including their gender identity, ability, race, neurodiversity, sexual orientation, and cultural background—is honored and respected.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        
         <section id="services" class="py-20 content-bg">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">
-                    Services Focused on Attachment & Connection
+                
+
+                <h2 class="text-4xl font-extrabold text-center mb-4">
+                    Services
                 </h2>
                 <div class="divider"></div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[var(--color-primary-purple)] hover:shadow-xl transition duration-300">
-                        <i class="fas fa-heart text-4xl text-[var(--color-primary-purple)] mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Couple's Therapy (EFCT)</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[--color-primary-purple] hover:shadow-xl transition duration-300">
+                        <i class="fas fa-heart text-4xl text-[--color-primary-purple] mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Couple's Therapy (EFCT)</h3>
                         <p class="text-sm text-gray-700 font-semibold mb-2">Focus: Breaking Negative Cycles & Emotional Repair</p>
                         <p class="text-gray-700 text-sm leading-relaxed">
                             Are you stuck in the same arguments, feeling distant, or caught in a painful cycle of criticism and withdrawal? Using Emotionally Focused Couple's Therapy (EFCT), we’ll identify the root cause of your conflict—the fear of disconnection—and create new patterns of emotional safety. This process helps partners turn toward each other with vulnerability, leading to lasting repair and a secure, loving bond. Affirming of all relationship structures, including polyamory.
                         </p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[var(--color-accent-coral)] hover:shadow-xl transition duration-300">
-                        <i class="fas fa-user text-4xl text-[var(--color-accent-coral)] mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Individual Therapy</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[--color-accent-pink] hover:shadow-xl transition duration-300">
+                        <i class="fas fa-user text-4xl text-[--color-accent-pink] mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Individual Therapy</h3>
                         <p class="text-sm text-gray-700 font-semibold mb-2">Focus: Trauma Healing & Self-Security</p>
                         <p class="text-gray-700 text-sm leading-relaxed">
                             Your current struggles—whether anxiety, depression, or difficulty setting boundaries—are often linked to the emotional blueprints created in your past relationships. In individual therapy, we use an attachment lens to explore these patterns, heal old wounds, and establish a deeply rooted sense of self-security. This is a place for trauma recovery, authentic identity affirmation, and building powerful internal resilience.
                         </p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[var(--color-accent-teal)] hover:shadow-xl transition duration-300">
-                        <i class="fas fa-child text-4xl text-[var(--color-accent-teal)] mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Adolescent (Teen) Therapy</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[--color-accent-teal] hover:shadow-xl transition duration-300">
+                        <i class="fas fa-child text-4xl text-[--color-accent-teal] mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Adolescent (Teen) Therapy</h3>
                         <p class="text-sm text-gray-700 font-semibold mb-2">Focus: Identity, Family Systems, and Stress</p>
                         <p class="text-gray-700 text-sm leading-relaxed">
                             Adolescence is a pivotal time for identity formation, and teens need a space to feel seen and understood without judgment. My work is grounded in family attachment, helping them navigate peer pressure, family conflict, academic stress, and gender or sexual identity discovery. I partner with parents to improve communication while providing the teen a confidential, empowering space to manage overwhelming feelings and grow.
                         </p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[var(--color-accent-yellow)] hover:shadow-xl transition duration-300">
-                        <i class="fas fa-comments text-4xl text-[var(--color-accent-yellow)] mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Relationship Conflict Resolution</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-[--color-cta-yellow] hover:shadow-xl transition duration-300">
+                        <i class="fas fa-comments text-4xl text-[--color-cta-yellow] mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-3">Relationship Conflict Resolution</h3>
                         <p class="text-sm text-gray-700 font-semibold mb-2">Focus: Communication & Collaborative Problem-Solving</p>
                         <p class="text-gray-700 text-sm leading-relaxed">
                             Conflict doesn't have to mean crisis. This service is designed for any relational dyad—co-parents, family members, or business partners—who need to move past a repetitive pattern of antagonism. We focus on teaching practical communication skills, fostering empathy, and creating structural changes that allow participants to listen to needs instead of reacting to demands. The goal is collaborative, effective problem-solving and systemic harmony.
@@ -235,17 +289,23 @@
             </div>
         </section>
         
+        
         <section id="insurance" class="py-20 content-bg">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">
-                    Insurance, Payment, and Rates
+                
+
+                <h2 class="text-4xl font-extrabold text-center mb-4">
+                    Insurance / Payment
                 </h2>
                 <div class="divider"></div>
 
-                <div class="grid md:grid-cols-3 gap-8">
+                
+
+                <div class="grid md:grid-cols-2 gap-8">
                     
-                    <div class="md:col-span-1 bg-[var(--color-bg-light)] p-6 rounded-xl shadow-lg border-l-4 border-[var(--color-accent-teal)]">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="fas fa-check-circle mr-3 text-[var(--color-accent-teal)]"></i> Accepted Insurances</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[--color-accent-teal]">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center text-[--color-heading-plum]"><i class="fas fa-check-circle mr-3 text-[--color-accent-teal]"></i> Accepted Insurances</h3>
                         <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
                             <li>Medicaid</li>
                             <li>Presbyterian Centennial Care</li>
@@ -257,16 +317,21 @@
                         </ul>
                     </div>
 
-                    <div class="md:col-span-2 bg-[var(--color-bg-light)] p-6 rounded-xl shadow-lg border-l-4 border-[var(--color-accent-coral)]">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="fas fa-dollar-sign mr-3 text-[var(--color-accent-coral)]"></i> Private Pay & Sliding Scale</h3>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[--color-accent-pink]">
                         
+
+                        <h3 class="text-2xl font-bold mb-4 flex items-center text-[--color-heading-plum]"><i class="fas fa-dollar-sign mr-3 text-[--color-accent-pink]"></i> Payment</h3>
+                        
+                        
+
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            If I do not accept your insurance, you may private pay for services. Please contact to discuss my sliding-scale self-pay rate. 
+                            If I do not accept your insurance you may self-pay for services. Please contact me to discuss my current sliding-scale rates.
                         </p>
                         <div class="bg-red-100 p-4 rounded-lg border border-red-300">
-                            <p class="font-bold text-gray-800">Insurance Reimbursement Note:</p>
+                            <p class="font-bold text-[--color-heading-plum]">Insurance Reimbursement Note:</p>
                             <p class="text-sm text-gray-700 mt-1">
-                                Some insurance companies allow their members to submit privately paid services for reimbursement. Please check with your insurance provider if that is something permitted and for their process to submit your paid invoices for reimbursement.
+                                Some insurance companies allow their members to submit self-pay services for reimbursement. Please check with your insurance provider to confirm that reimbursement is permitted and I would be happy to submit any self-pay invoices to insurance companies I don’t currently accept.
                             </p>
                         </div>
                     </div>
@@ -274,18 +339,20 @@
             </div>
         </section>
         
+        
         <section id="faq" class="py-20 content-bg">
             <div class="max-w-4xl mx-auto px-6 lg:px-8 space-y-8">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">
+                <h2 class="text-4xl font-extrabold text-center mb-4">
                     Frequently Asked Questions
                 </h2>
                 <div class="divider"></div>
 
                 <div class="space-y-4">
 
+                    
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-900 hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-1">
-                            <span><i class="fas fa-link mr-3 text-[var(--color-primary-purple)]"></i> What is Attachment-Focused Therapy?</span>
+                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-[--color-heading-plum] hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-1">
+                            <span><i class="fas fa-link mr-3 text-[--color-primary-purple]"></i> What is Attachment-Focused Therapy?</span>
                             <i class="fas fa-chevron-down text-gray-500 transform transition-transform duration-300"></i>
                         </button>
                         <div id="faq-1" class="faq-answer px-5 text-gray-700 leading-relaxed bg-gray-50 border-t border-gray-100" role="region" aria-labelledby="faq-1">
@@ -293,9 +360,10 @@
                         </div>
                     </div>
 
+                    
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-900 hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-2">
-                            <span><i class="fas fa-heart-crack mr-3 text-[var(--color-accent-coral)]"></i> Is Emotionally Focused Couple's Therapy (EFCT) right for us?</span>
+                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-[--color-heading-plum] hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-2">
+                            <span><i class="fas fa-heart-crack mr-3 text-[--color-accent-pink]"></i> Is Emotionally Focused Couple's Therapy (EFCT) right for us?</span>
                             <i class="fas fa-chevron-down text-gray-500 transform transition-transform duration-300"></i>
                         </button>
                         <div id="faq-2" class="faq-answer px-5 text-gray-700 leading-relaxed bg-gray-50 border-t border-gray-100" role="region" aria-labelledby="faq-2">
@@ -303,9 +371,10 @@
                         </div>
                     </div>
 
+                    
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-900 hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-3">
-                            <span><i class="fas fa-palette mr-3 text-[var(--color-accent-teal)]"></i> What does 'Queer-Affirming' mean in your practice?</span>
+                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-[--color-heading-plum] hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-3">
+                            <span><i class="fas fa-palette mr-3 text-[--color-accent-teal]"></i> What does 'Queer-Affirming' mean in your practice?</span>
                             <i class="fas fa-chevron-down text-gray-500 transform transition-transform duration-300"></i>
                         </button>
                         <div id="faq-3" class="faq-answer px-5 text-gray-700 leading-relaxed bg-gray-50 border-t border-gray-100" role="region" aria-labelledby="faq-3">
@@ -313,19 +382,21 @@
                         </div>
                     </div>
 
+                    
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-900 hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-4">
-                            <span><i class="fas fa-hand-holding-dollar mr-3 text-[var(--color-accent-yellow)]"></i> What is the cost of a session if I don't use insurance?</span>
+                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-[--color-heading-plum] hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-4">
+                            <span><i class="fas fa-hand-holding-dollar mr-3 text-[--color-cta-yellow]"></i> What is the cost of a session if I don't use insurance?</span>
                             <i class="fas fa-chevron-down text-gray-500 transform transition-transform duration-300"></i>
                         </button>
                         <div id="faq-4" class="faq-answer px-5 text-gray-700 leading-relaxed bg-gray-50 border-t border-gray-100" role="region" aria-labelledby="faq-4">
-                            <p>My full self-pay rate is competitive for the Albuquerque area. Crucially, I offer a **sliding scale** based on financial need to ensure therapy is accessible. Please contact me directly to discuss your income level and determine a sustainable rate for our work together. For insurance details, please refer to the <a href="#insurance" class="text-blue-600 hover:underline">Insurance/Payment section</a>.</p>
+                            <p>My full self-pay rate is competitive for the Albuquerque area. Crucially, I offer a **sliding scale** based on financial need to ensure therapy is accessible. Please contact me directly to discuss your income level and determine a sustainable rate for our work together. For insurance details, please refer to the <a href="#insurance" class="text-blue-600 hover:underline">Insurance / Payment section</a>.</p>
                         </div>
                     </div>
 
+                    
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-900 hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-5">
-                            <span><i class="fas fa-clipboard-question mr-3 text-[var(--color-primary-purple)]"></i> What should I expect in the first session?</span>
+                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-[--color-heading-plum] hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-5">
+                            <span><i class="fas fa-clipboard-question mr-3 text-[--color-primary-purple]"></i> What should I expect in the first session?</span>
                             <i class="fas fa-chevron-down text-gray-500 transform transition-transform duration-300"></i>
                         </button>
                         <div id="faq-5" class="faq-answer px-5 text-gray-700 leading-relaxed bg-gray-50 border-t border-gray-100" role="region" aria-labelledby="faq-5">
@@ -333,9 +404,10 @@
                         </div>
                     </div>
                     
+                    
                     <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-gray-900 hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-6">
-                            <span><i class="fas fa-video mr-3 text-[var(--color-accent-coral)]"></i> Do you offer in-person or virtual sessions?</span>
+                        <button class="faq-question-button w-full flex justify-between items-center p-5 text-lg font-semibold text-left text-[--color-heading-plum] hover:bg-gray-50 transition duration-300" aria-expanded="false" aria-controls="faq-6">
+                            <span><i class="fas fa-video mr-3 text-[--color-accent-pink]"></i> Do you offer in-person or virtual sessions?</span>
                             <i class="fas fa-chevron-down text-gray-500 transform transition-transform duration-300"></i>
                         </button>
                         <div id="faq-6" class="faq-answer px-5 text-gray-700 leading-relaxed bg-gray-50 border-t border-gray-100" role="region" aria-labelledby="faq-6">
@@ -347,67 +419,77 @@
             </div>
         </section>
 
+        
         <section id="resources" class="py-20 content-bg border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-10">
-                <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">
+                <h2 class="text-4xl font-extrabold text-center mb-4">
                     Immediate Support & Community Resources
                 </h2>
                 <div class="divider"></div>
 
+                
                 <div class="bg-red-100 p-6 rounded-xl shadow-lg border-l-4 border-red-500">
                     <h3 class="text-3xl font-bold text-red-700 mb-4 flex items-center"><i class="fas fa-phone-volume mr-3 text-red-500"></i> New Mexico Crisis Lines (Available 24/7)</h3>
                     <div class="grid md:grid-cols-3 gap-6">
+                        
                         <div class="p-4 bg-white rounded-lg shadow-md">
-                            <p class="font-bold text-lg">Agora Crisis Line</p>
+                            <p class="font-bold text-lg text-[--color-heading-plum]">Agora Crisis Line</p>
                             <p class="text-red-600 font-mono text-xl my-1">1-855-505-4505</p>
                             <a href="http://www.agoracares.org/" target="_blank" class="text-sm text-blue-600 hover:underline">Visit Website</a>
                         </div>
+                        
                         <div class="p-4 bg-white rounded-lg shadow-md">
-                            <p class="font-bold text-lg">New Mexico Crisis Line</p>
+                            <p class="font-bold text-lg text-[--color-heading-plum]">New Mexico Crisis Line</p>
                             <p class="text-red-600 font-mono text-xl my-1">1-855-662-7474</p>
                             <a href="https://nmcrisisline.com/" target="_blank" class="text-sm text-blue-600 hover:underline">Visit Website</a>
                         </div>
+                        
                         <div class="p-4 bg-white rounded-lg shadow-md">
-                            <p class="font-bold text-lg">NM Peer to Peer Warm-line</p>
+                            <p class="font-bold text-lg text-[--color-heading-plum]">NM Peer to Peer Warm-line</p>
                             <p class="text-red-600 font-mono text-xl my-1">1-855-466-7100</p>
-                            <p class="text-xs text-gray-500">Call: 3:30pm – 11:30pm | Text: 6pm – 11pm</p>
+                            <p class="text-xs text-gray-700">Call: 3:30pm – 11:30pm | Text: 6pm – 11pm</p>
                             <a href="https://nmcrisisline.com/peer-to-peer_warmline/" target="_blank" class="text-sm text-blue-600 hover:underline">Visit Website</a>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-bold text-gray-900 mt-10 mb-6">Additional Albuquerque & Specialized Resources</h3>
+                
+                <h3 class="text-2xl font-bold mt-10 mb-6">Additional Albuquerque & Specialized Resources</h3>
                 <ul class="space-y-4">
+                    
                     <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-gray-400">
-                        <p class="font-bold text-lg">UPC Outpatient Psychotherapy Clinic</p>
+                        <p class="font-bold text-lg text-[--color-heading-plum]">UPC Outpatient Psychotherapy Clinic</p>
                         <p class="text-gray-700 text-sm">Provides walk-in therapy appointments to the community. 
                             <a href="https://www.gracetherapynm.com/_files/ugd/f77aae_c89fc3cfaac14333b7606950c062913d.pdf" target="_blank" class="text-blue-600 hover:underline">Click for Information Flyer (PDF)</a>
                         </p>
                     </li>
                     
+                    
                     <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-gray-400">
-                        <p class="font-bold text-lg">Albuquerque Crisis & Trauma Support</p>
+                        <p class="font-bold text-lg text-[--color-heading-plum]">Albuquerque Crisis & Trauma Support</p>
                         <p class="text-gray-700 text-sm space-y-1">
-                            Mobile Crisis Team: <a href="https://www.bernco.gov/department-behavioral-health-services/mobile-crisis-teams/" target="_blank" class="text-blue-600 hover:underline">Bernalillo County Mobile Crisis Teams</a>
+                            **Mobile Crisis Team:** <a href="https://www.bernco.gov/department-behavioral-health-services/mobile-crisis-teams/" target="_blank" class="text-blue-600 hover:underline">Bernalillo County Mobile Crisis Teams</a>
                             <br>
-                            Albuquerque Crisis Lines:
+                            **Albuquerque Crisis Lines:**
                             <a href="https://www.cabq.gov/albuquerque-family-advocacy-center/victims-rights-and-assistance/24-hour-crisis-lines" target="_blank" class="text-blue-600 hover:underline">CABQ 24-Hour Crisis Lines</a>
                             <br>
-                            Trauma Recovery Network: <a href="https://aatrn.org/" target="_blank" class="text-blue-600 hover:underline">Albuquerque Area Trauma Recovery Network (AATRN)</a>
+                            **Trauma Recovery Network:** <a href="https://aatrn.org/" target="_blank" class="text-blue-600 hover:underline">Albuquerque Area Trauma Recovery Network (AATRN)</a>
                         </p>
                     </li>
                     
+                    
                     <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-gray-400">
-                        <p class="font-bold text-lg">S.A.F.E. House (Domestic Violence Support)</p>
-                        <p class="text-gray-700 text-sm">If you or someone you know is experiencing domestic violence, S.A.F.E. House offers a wealth of resources. </p>
+                        <p class="font-bold text-lg text-[--color-heading-plum]">S.A.F.E. House (Domestic Violence Support)</p>
+                        <p class="text-gray-700 text-sm">If you or someone else is experiencing domestic violence, S.A.F.E. House offers a wealth of resources. </p>
                         <p class="text-gray-700 text-sm mt-1">
                             Phone: 505-247-4219 | 
                             <a href="https://www.safehousenm.org/" target="_blank" class="text-blue-600 hover:underline">Visit Website</a>
                         </p>
                     </li>
                     
+                    
                     <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-gray-400">
-                        <p class="font-bold text-lg">Child Abuse Hotline</p>
+                        <p class="font-bold text-lg text-[--color-heading-plum]">Child Abuse Hotline</p>
                         <p class="text-gray-700 text-sm">New Mexico Children, Youth and Families Department</p>
                         <p class="text-gray-700 text-sm mt-1">
                             Phone: 1-855-333-7233 | 
@@ -415,18 +497,20 @@
                         </p>
                     </li>
 
+                    
                     <li class="p-4 bg-white rounded-lg shadow-sm border-l-4 border-gray-400">
-                        <p class="font-bold text-lg">LGBTQIA+ Senior Inclusive Housing</p>
+                        <p class="font-bold text-lg text-[--color-heading-plum]">LGBTQIA+ Senior Inclusive Housing</p>
                         <a href="https://www.assistedliving.org/lgbtqia-senior-housing-options/" target="_blank" class="text-blue-600 hover:underline text-sm">Housing Options and Resources</a>
                     </li>
                 </ul>
                 <p class="text-sm text-gray-500 mt-8">
-                    Please note: This list is for informational purposes only. If you are experiencing an immediate emergency, please call 911 or go to the nearest emergency room.
+                    *Please note: This list is for informational purposes only. If you are experiencing an immediate emergency, please call 911 or go to the nearest emergency room.*
                 </p>
             </div>
         </section>
 
-        <section id="contact" class="py-20 bg-[var(--color-primary-purple)] text-white">
+        
+        <section id="contact" class="py-20 bg-[--color-primary-purple] text-white">
             <div class="max-w-4xl mx-auto px-6 lg:px-8 space-y-10">
                 <h2 class="text-4xl font-extrabold text-center text-white">
                     Let's Work Together
@@ -436,138 +520,127 @@
                 </p>
 
                 <div class="grid md:grid-cols-2 gap-10">
+                    
                     <div class="space-y-6">
-                        <p class="text-xl font-semibold flex items-center"><i class="fas fa-map-marker-alt mr-3 text-[var(--color-accent-teal)]"></i> In-Person Location: Albuquerque, NM</p>
-                        <p class="text-xl font-semibold flex items-center"><i class="fas fa-envelope mr-3 text-[var(--color-accent-teal)]"></i> Email: <a href="mailto:skip@gracetherapynm.com" class="hover:underline">skip@gracetherapynm.com</a></p>
-                        <p class="text-xl font-semibold flex items-center"><i class="fas fa-phone mr-3 text-[var(--color-accent-teal)]"></i> Phone: 480-559-9178</p>
+                        <p class="text-xl font-semibold flex items-center"><i class="fas fa-map-marker-alt mr-3 text-[--color-accent-teal]"></i> In-Person Location: Albuquerque, NM</p>
+                        <p class="text-xl font-semibold flex items-center"><i class="fas fa-envelope mr-3 text-[--color-accent-teal]"></i> Email: <a href="mailto:skip@gracetherapynm.com" class="hover:underline">skip@gracetherapynm.com</a></p>
+                        <p class="text-xl font-semibold flex items-center"><i class="fas fa-phone mr-3 text-[--color-accent-teal]"></i> Phone: 480-559-9178</p>
                         
-                        <a href="https://calendly.com/skip-gracetherapynm/50-min-session" target="_blank" class="inline-block w-full text-center px-6 py-3 text-[var(--color-text)] font-bold bg-[var(--color-accent-yellow)] rounded-lg hover:bg-yellow-400 transition duration-300 shadow-xl mt-4 cta-button">
-                            Click Here to Schedule a Session with Me
+                        
+                        <a href="https://calendly.com/skip-gracetherapynm/50-min-session" target="_blank" class="inline-block w-full text-center px-6 py-3 text-[--color-heading-plum] font-bold bg-[--color-cta-yellow] rounded-lg cta-button schedule-cta mt-4">
+                            Click Here to Schedule a Session with Me (Calendly Link)
                         </a>
                     </div>
                     
-                    <div class="bg-purple-900 p-6 rounded-xl shadow-2xl">
-                        <h3 class="text-2xl font-bold mb-4 text-[var(--color-accent-teal)]">Contact Skip</h3>
-                        <form id="contactForm" class="space-y-4">
-                            <input type="text" id="name" placeholder="Your Name" required class="w-full p-3 rounded bg-purple-800 border border-purple-700 text-white placeholder-gray-400">
-                            <input type="email" id="email" placeholder="Your Email" required class="w-full p-3 rounded bg-purple-800 border border-purple-700 text-white placeholder-gray-400">
-                            <input type="text" id="subject" placeholder="Subject (e.g., Couple's Therapy Inquiry)" required class="w-full p-3 rounded bg-purple-800 border border-purple-700 text-white placeholder-gray-400">
-                            <textarea id="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded bg-purple-800 border border-purple-700 text-white placeholder-gray-400"></textarea>
-                            <button type="submit" class="w-full py-3 bg-[var(--color-accent-coral)] text-gray-900 rounded-lg font-bold hover:bg-pink-400 transition duration-300">
+                    
+                    <div class="bg-purple-900 p-6 rounded-xl shadow-xl">
+                        <form id="contact-form" class="space-y-4">
+                            <h3 class="text-2xl font-bold mb-4 text-white">Send Me a Message</h3>
+                            
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-200">Your Name</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[--color-cta-yellow] focus:border-[--color-cta-yellow] sm:text-sm bg-purple-950 text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-200">Email Address</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[--color-cta-yellow] focus:border-[--color-cta-yellow] sm:text-sm bg-purple-950 text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-200">Your Message</label>
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[--color-cta-yellow] focus:border-[--color-cta-yellow] sm:text-sm bg-purple-950 text-white"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-[--color-heading-plum] bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition duration-150 primary-cta">
                                 Send Message
                             </button>
-                            <p id="formMessage" class="text-center text-sm mt-3 hidden"></p>
+                            <div id="form-status" class="mt-3 text-center text-sm font-medium hidden"></div>
                         </form>
                     </div>
                 </div>
-
             </div>
         </section>
 
     </main>
     
-    <footer class="content-bg text-gray-600 py-8">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center space-y-4">
-            <p class="text-sm font-semibold">Skip Loehr Therapy Services &copy; 2025</p>
-            
-            <div class="flex flex-wrap justify-center space-x-4 text-xs font-medium">
-                <a href="#" class="hover:text-[var(--color-primary-purple)]">Privacy Policy (HIPAA-compliant)</a>
-                <a href="#" class="hover:text-[var(--color-primary-purple)]">Terms of Use / Disclaimer</a>
-                <a href="#" class="hover:text-[var(--color-primary-purple)]">Notice of Non-Discrimination</a>
-                <a href="#" class="hover:text-[var(--color-primary-purple)]">Good Faith Estimate Statement (No Surprises Act)</a>
-                <a href="#" class="hover:text-[var(--color-primary-purple)]">Accessibility Statement</a>
+    
+    <footer class="bg-gray-100 py-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-gray-600 text-sm space-y-4">
+            <p>&copy; 2025 Skip Loehr Therapy Services. All rights reserved.</p>
+            <p>
+                Proudly serving the Albuquerque, New Mexico area. | 
+                <a href="#" class="hover:text-[--color-primary-purple] transition duration-150">Privacy Policy</a> | 
+                <a href="#" class="hover:text-[--color-primary-purple] transition duration-150">Terms of Service</a>
+            </p>
+            <div class="flex justify-center space-x-4">
+                
+                <a href="https://www.psychologytoday.com/profile/skip-loehr" target="_blank" class="text-gray-500 hover:text-[--color-accent-teal] text-2xl transition duration-150" aria-label="Psychology Today Profile">
+                    <i class="fas fa-brain"></i>
+                </a>
+                
+                <a href="mailto:skip@gracetherapynm.com" class="text-gray-500 hover:text-[--color-primary-purple] text-2xl transition duration-150" aria-label="Email Skip Loehr">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // JavaScript for Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-
-        // JavaScript for Contact Form Simulation (Since this is a blueprint, it simulates submission)
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
-
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Stop the default form submission
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // NOTE: In the final Squarespace/Wix build, this submission logic 
-            // will be replaced by the platform's native form capabilities, 
-            // ensuring the email goes to skip@gracetherapynm.com.
-            
-            // Simulated submission logic
-            console.log("--- Form Submission Data (Simulated) ---");
-            console.log(`To: skip@gracetherapynm.com`);
-            console.log(`From: ${name} <${email}>`);
-            console.log(`Subject: ${subject}`);
-            console.log(`Message: ${message}`);
-            console.log("---------------------------------------");
-
-            // Display success message
-            formMessage.classList.remove('hidden');
-            formMessage.classList.remove('text-red-400');
-            formMessage.classList.add('text-green-400');
-            formMessage.innerHTML = 'Thank you for your message! I will respond to your inquiry at ' + email + ' soon.';
-            
-            // Clear the form fields
-            contactForm.reset();
-
-            // Hide the message after 5 seconds
-            setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
-        });
-        
         // JavaScript for FAQ Accordion
         document.querySelectorAll('.faq-question-button').forEach(button => {
             button.addEventListener('click', () => {
                 const answer = button.nextElementSibling;
-                const icon = button.querySelector('i:last-child'); // Target the chevron icon
+                const icon = button.querySelector('i:last-child');
                 const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-                // Collapse all others and remove active class
+                // Close all others and reset icons
                 document.querySelectorAll('.faq-question-button').forEach(otherButton => {
                     if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
                         otherButton.setAttribute('aria-expanded', 'false');
-                        otherButton.nextElementSibling.style.maxHeight = null;
-                        otherButton.nextElementSibling.classList.remove('py-4');
+                        otherButton.nextElementSibling.style.maxHeight = 0;
+                        otherButton.nextElementSibling.style.paddingTop = '0';
+                        otherButton.nextElementSibling.style.paddingBottom = '0';
                         otherButton.querySelector('i:last-child').classList.remove('rotate-180');
                     }
                 });
 
-                // Toggle current item
-                if (isExpanded) {
-                    button.setAttribute('aria-expanded', 'false');
-                    answer.style.maxHeight = null;
-                    answer.classList.remove('py-4');
-                    icon.classList.remove('rotate-180');
-                } else {
-                    button.setAttribute('aria-expanded', 'true');
-                    // Use a large max-height to reliably accommodate all content and padding
-                    answer.style.maxHeight = "1000px"; 
-                    answer.classList.add('py-4');
+                // Toggle the current one
+                button.setAttribute('aria-expanded', !isExpanded);
+                if (!isExpanded) {
+                    answer.style.maxHeight = answer.scrollHeight + 32 + 'px'; // +32 for p-5 (padding top/bottom)
+                    answer.style.paddingTop = '1rem';
+                    answer.style.paddingBottom = '1rem';
                     icon.classList.add('rotate-180');
+                } else {
+                    answer.style.maxHeight = 0;
+                    answer.style.paddingTop = '0';
+                    answer.style.paddingBottom = '0';
+                    icon.classList.remove('rotate-180');
                 }
             });
+        });
+
+        // Simple form handling (prevents default submit for demo)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const statusDiv = document.getElementById('form-status');
+            statusDiv.classList.remove('hidden');
+            statusDiv.classList.add('text-green-300');
+            statusDiv.textContent = 'Thank you! Your message has been sent (Demo Mode).';
+            
+            // Clear form after a delay
+            setTimeout(() => {
+                this.reset();
+                statusDiv.classList.add('hidden');
+            }, 3000);
         });
     </script>
 </body>
 </html>
-
